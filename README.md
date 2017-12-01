@@ -1,6 +1,7 @@
 # ag_ud
-Agud es un software que implementa la libreria jgap y permite configurar algoritmos geneticos para diversos problemas mediante la personalizacion de la funcion de fitness
+Agud es un software que implementa la libreria jgap y permite configurar algoritmos geneticos para diversos problemas mediante la personalizacion de la funcion de fitness. 
 
+Esta personalizacion se realiza mediante scripts en un leguaje propio con sintaxis c, los cuales son interpretados por una maquina de pila.
 
 # Configuracion
 
@@ -57,3 +58,58 @@ Se cheque si las genes se inicializan aleatoriamente o si se toma el modelo para
  
 ### Caja de texto de genes: 
 Aquí se puede editar el modelo de los genes que se usaran en el algoritmo genético, hay que tener en cuenta que cada fila representa un gen del cromosoma al cual se le pueden colocar un determinado numero de alelos, cada valor debe estar separado por un tabulador, y entre gen y gen del cromosoma se debe separar todo por un enter, los genes creados se pueden guardar en archivos de extensión  .crm y cargados desde los mismos.
+
+
+
+# Función de Fitness.
+
+![alt text](https://github.com/rquiroga83/ag_ud/blob/ag_ud/imagenes/fitness.jpg)
+
+En esta pantalla se digita el algoritmo que evaluara cada cromosoma, este será cargado por el programa y se utilizara como parte integral del mismo para evaluar a cada individuo de la población generada por el algoritmo genético, es impórtate tener en cuenta que esta función retorna un valor escalar que es colocado en la pila del programa por medio de la función  “pop ( valor ); ”, y que esta se limita únicamente a dar un puntaje a cada cromosoma es decir a indicar que tan apto es el cromosoma para resolver un problema determinado por medio de un numero.
+ 
+Esta pantalla contiene dos botones en la parte inferior los cuales sirven para guardar y cargar archivos de extensión .spl  que contiene el código de Fitness estos archivos pueden ser editados desde el WordPad o desde la misma pantalla de edición.
+ 
+El programa esta diseñado para usar una sintaxis de  C simplificada  y soporta las siguientes características:
+
+
+### Funciones generales :
+ ```c
+  /** Retorna el coseno de un valor determinado. */
+  cos(valor)
+  
+  /** Retorna el seno de un valor determinado.*/
+  sin(valor)
+ 
+  /** Retorna la potencia de un valor determinado.*/
+  pow(valor,potencia)
+  
+  /** Retorna la raíz cuadrada de un valor determinado. */
+  sqrt(valor)
+  
+  /** 
+   * Se utiliza para extraer el un gen del cromosoma a evaluar 
+   * se da una posición de gen y el alelo y retorna el valor 
+   * de dicho alelo en el gen.
+   */
+  gen(gen_pos,alelo)    
+ 
+  /** Retorna el minimo de dos valores.*/
+  min(valor1,valor2)
+  
+  /** Retorna el maximo de dos valores.*/
+  max(valor1,valor2)
+ 
+  /** Retorna el valor absoluto de un valor.*/
+  abs(valor)
+ 
+  /** Coloca un valor el la pila de programa retorna 0 si es posible colocar dicho valor de lo contrario retorna –1.*/
+  pop(valor)             
+ 
+  /**
+   * Extrae un valor de la pila si opción es 0, 
+   * si opción es 1 borrara toda la pila y retorna 0 si es posible borrarla 
+   * de lo contrario retorna –1.
+   */
+  get(opcion)            
+  
+```
