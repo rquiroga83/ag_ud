@@ -23,8 +23,8 @@ El programa tiene tres tipos de crossover y una opción de no crossover. El prim
 ## Rata de crossover:  
 Indica que cantidad de la población será cruzada se divide la población sobre este numero es decir si se indica 2 la mitad de la población será cruzada si se indica 3 la tercera parte etc … .
  
-##Tipo de Selección : 
-Indica cual el tipo de selección de genes aptos que se usara una es selección natural que como su nombre lo indica escoge a los mejores, otra es la selección por torneo que hace un torneo entre algunos individuos de la población y selecciona a los ganadores de dicho torneo y por ultimo esta la selección por rueda de la ruleta que selecciona individuos al asar de la población.
+## Tipo de Selección : 
+Indica cual el tipo de selección de genes aptos que se usara. La primera es selección natural que como su nombre lo indica escoge a los mejores, la segunda es la selección por torneo que hace un torneo entre algunos individuos de la población y selecciona a los ganadores de dicho torneo y por ultimo esta la selección por rueda de la ruleta que selecciona individuos al asar de la población.
  
 ## Tamaño del torneo: 
 Casilla que solo aplica para la selección por torneo y indica cuantos participan en este.
