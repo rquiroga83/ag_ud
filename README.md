@@ -113,3 +113,48 @@ El programa esta diseñado para usar una sintaxis de  C simplificada  y soporta 
   get(opcion)            
   
 ```
+
+### Sentecias de control:
+
+Las siguentes son las unicas sentencias de control soportadas.
+
+```c
+  if( expresion ){
+    sentencias; ...
+  }
+  else{
+    Sentecias; ...  
+  }   
+ 
+     while( expresión ){
+     sentencias; ...
+  }
+   
+  for( variable_loop; expresión; incremento ){
+     sentencias;
+  }
+```
+
+### Notas:  
+Ninguna de las sentencias de control soportan sintaxis simplificada es decir son necesarias las llaves siempre, como las variables no es necesario declararlas se puede inicializar en el “for”, una variable que no  exista “for( i =0; ….  ” pero no se          pueden declarar variable aquí “  for( int i = 0;  …. ”, en el lenguaje no existen los incrementadores “i++” ya que todas las variables son reales por lo tanto hay que indicar el incremento como “i = i + 1”, para el caso del “for” es necesario declarar todos los argumentos de lo contrario el “for” no tendra efecto
+
+### Consideraciones generales:
+Todo programa que se escriba recibe dos valores por defecto que son la longitud de cromosoma y el tamaño de cada gen, estos valores son depositados en la pila de programa y pueden ser recuperados por medio de la funcion “get()  … crom_logitud  = get( 0 )”, adicionalmente el valor de fitness debe ser colocado en la pila al final del programa con lo cual podría decirse que todo programa debe llevar por lo menos las siguientes sentencias.
+
+```c
+/**
+ * Sentencias basicas de cada programa
+ **/ 
+CromLongitud = get( 0 );   // longitud del cromosoma
+CromAlelos = get( 0 );     // logitud del gen.
+.
+.
+.
+.
+ 
+
+estado = get( 1 );       // borra la pila 
+estado = pop( fitness ); // coloca el valor de fitness en lapila.
+```
+
+También debe tenerse en cuenta que las variables no deben ser declaradas pues estas son creadas en el momento de la asignación. Pero si, deben tener algún valor al ser utilizadas es decir estaría mal “ variable = variable + 1  ” si “variable” no contiene un valor previo, esto generaría un error de interpretación, todas las variables aquí son reales no existen tipos “booleanos”,”enteros”,”long”, etc…, solo hay un tipo numérico esto es asi por que el objetivo de la función de Fitness es evaluar numéricamente un cromosoma.
