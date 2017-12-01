@@ -4,19 +4,21 @@ Agud es un software que implementa la libreria jgap y permite configurar algorit
 
 # Configuracion
 
+![alt text](https://github.com/rquiroga83/ag_ud/blob/ag_ud/imagenes/configuracion1.png) ![alt text](https://github.com/rquiroga83/ag_ud/blob/ag_ud/imagenes/configuracion2.png)
+
 Aquí es donde se configura el algoritmo genético. La primera pestaña de configuración general contiene los siguientes ítems:
  
 ## Cantidad de población: 
 Es el numero de la población, Hay que tener en cuenta que entre mas población el problema tendera a solucionarse en menos generaciones pero se ocupara mas memoria y el algoritmo correrá mas lento.
  
 ## Tipo de mutación: 
-Casilla donde se selecciona la mutación el programa tiene 3 de tipos uno es la mutación aleatoria que selecciona un ge al azar de cromosoma y la cambia en el rango de cambio es pacificado para el mismo, otra es la mutación de intercambio que no varia el valor de los genes solo los intercambia unos con otros y mutación de dos vías que verifica el impacto en el cromosoma de cambiar un gen, y cuado ha seleccionado los que tiene menor impacto aplica una mutación aleatoria sobre estos.  
+Casilla donde se selecciona la mutación el programa tiene 3 tipos. Una es la mutación aleatoria en la que se selecciona un gen al azar de un cromosoma y lo cambia en el rango especificado para el mismo. Otra es la mutación de intercambio que no varia el valor de los genes solo los intercambia unos con otros. Y por ultimo la mutación de dos vías, que verifica el impacto de cambiar un gen en el cromosoma y cuado ha seleccionado los que tiene menor un menor impacto aplica una mutación aleatoria sobre estos.  
  
 ## Rata de mutación: 
 Es la probabilidad en porcentaje que tiene cada gen de ser mutado.
  
 ## Tipo de crossover: 
-El programa tiene tres tipos de crossover y una opción de no crossover el primer tipo es el  de punto de cruce aleatorio que selecciona un punto de cruza al asar e intercambia los genes de hay para aya el segundo el crosover promediado que es igual que el alterior pero la rata de crossover no es fija depende que cuales cromosomas son mas aptos, y punto de cruce gen a gen es como el promero pero no cambia los alelos de cada gen si no que los mantiene constantes es decir solo cruza  los genes como tal.
+El programa tiene tres tipos de crossover y una opción de no crossover. El primer tipo es el  de punto de cruce aleatorio que selecciona un punto de cruza al asar e intercambia los genes de hay. El segundo es llamado crosover promediado, que es igual que el alterior pero la rata de crossover no es fija depende cuales cromosomas son mas aptos. Y el crossover de punto de cruce gen a gen el cual es como el primero pero no cambia los alelos de cada gen si no que los mantiene constantes es decir solo cruza  los genes como tal.
  
 ## Rata de crossover:  
 Indica que cantidad de la población será cruzada se divide la población sobre este numero es decir si se indica 2 la mitad de la población será cruzada si se indica 3 la tercera parte etc … .
